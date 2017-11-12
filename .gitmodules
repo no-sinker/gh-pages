@@ -1,0 +1,3 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:no-sinker/no-sinker.github.io.git
