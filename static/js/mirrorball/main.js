@@ -1,5 +1,5 @@
 // based on http://irukanobox.blogspot.jp/2016/08/threejs_13.html, http://matorel.com/archives/723
-
+$(function() {
 // キューブマップ用のテクスチャ作成
 // var cubeTexture = new THREE.CubeTextureLoader()
 //     .setPath( './image/sunflower/' )
@@ -29,9 +29,12 @@ camera.position.z = 500;
 // レンダラーの作成（アンチエイリアス有効）
 var renderer = new THREE.WebGLRenderer( {antialias: true} );
 // レンダラーが描画するキャンバスサイズの設定
-renderer.setSize( window.innerWidth, window.innerHeight );
+// renderer.setSize( window.innerWidth, window.innerHeight );
 // キャンバスをDOMツリーに追加
-document.body.appendChild( renderer.domElement );
+// document.body.appendChild( renderer.domElement );
+canvas = document.getElementById('mirrorball');
+renderer.setSize( canvas.clientWidth, canvas.clientHeight);
+canvas.appendChild( renderer.domElement );
 
 // 環境光の作成
 var light = new THREE.AmbientLight( 0xffffff );
@@ -78,6 +81,8 @@ scene.add( mball1 );
 
 // OrbitControlsインスタンス作成
 var controls = new THREE.OrbitControls( camera, renderer.domElement );
+// controls.autoRotate = true;
+controls.enableZoom = false;
 
 function render(){
         requestAnimationFrame( render );
@@ -88,3 +93,4 @@ function render(){
         controls.update();
 }
 render();
+});
