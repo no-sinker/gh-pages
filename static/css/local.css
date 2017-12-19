@@ -6,3 +6,10 @@
     background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+#mirrorball {
+  width: 800px;
+  height: 300px;
+}
