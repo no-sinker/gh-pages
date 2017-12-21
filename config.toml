@@ -1,4 +1,5 @@
-baseURL = "https://no-sinker.github.io/"
+# baseURL = "https://no-sinker.github.io/"
+baseURL = "http://www.no-sinker.co.jp/"
 languageCode = "ja-jp"
 title = "no-sinker"
 # theme = "landing-page-hugo"

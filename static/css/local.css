@@ -13,3 +13,44 @@
   width: 800px;
   height: 300px;
 }
+#about-content table {
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+#about-content td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#about-content tr:nth-child(2n+1) {
+  background-color: #eee;
+}
+.privacy-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+}
+#privacy-content {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+#privacy-content .privacy-policy-head {
+  line-height: 1.5em;
+  text-align: right;
+  margin-bottom: 1.0em;
+}
+#privacy-content .privacy-policy-body {
+  line-height: 2.0em;
+  text-align: left;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+#privacy-content .privacy-policy-footer {
+  margin-top: 1.0em;
+  line-height: 1.5em;
+  text-align: right;
+}
+#privacy-content .section-heading {
+  text-align: center;
+}

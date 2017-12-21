@@ -1,32 +1,5 @@
 <section id="services">
 
- <!-- Page Content (mirrorball test) -->
- {{ range where .Data.Pages "Section" "mirrorball" | first 1 }}
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">{{ .Title }}</h2>
-                    {{ .Content }}
-                </div>
-
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6 overflow-hidden">
-                    <div id="mirrorball"></div>
-                </div>
-
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /mirrorball-section -->
- {{ end }}
-
  {{ range $index, $element :=  .Data.Pages }}{{ if or (eq .Section "services") (eq .Section "post") }}
     {{ if modBool $index 2 }}
     <div class="content-section-a">
