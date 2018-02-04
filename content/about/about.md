@@ -12,5 +12,5 @@ title = "About Us"
 | 設立      | 2008年12月24日      |
 | 代表取締役  | 猪子 香             |
 | 取引銀行   | 三井住友銀行 川西支店 |
-| URL       | http://www.no-sinker.co.jp |
+| URL       | https://www.no-sinker.co.jp |
 | e-mail    | info@no-sinker.co.jp |
