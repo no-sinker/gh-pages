@@ -2,7 +2,7 @@
 $(function() {
     // キューブマップ用のテクスチャ作成
     var cubeTexture = new THREE.CubeTextureLoader()
-	.setPath( 'https://no-sinker.co.jp/image/clouds1/' )
+	.setPath( 'https://www.no-sinker.co.jp/image/clouds1/' )
 	.load( [ 'clouds1_south.png',
 		 'clouds1_west.png',
 		 'clouds1_up.png',
