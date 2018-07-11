@@ -26,14 +26,18 @@
   background-color: #eee;
 }
 .privacy-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
 }
 #privacy-content {
-  padding-left: 5em;
-  padding-right: 5em;
+  // padding-left: 5em;
+  // padding-right: 5em;
+}
+#privacy-container {
+  margin-left: -5px;
+  margin-right: -5px;
 }
 #privacy-content .privacy-policy-head {
   line-height: 1.5em;
@@ -43,8 +47,8 @@
 #privacy-content .privacy-policy-body {
   line-height: 2.0em;
   text-align: left;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 0.0em;
+  padding-right: 0.0em;
 }
 #privacy-content .privacy-policy-footer {
   margin-top: 1.0em;
@@ -53,4 +57,8 @@
 }
 #privacy-content .section-heading {
   text-align: center;
+  font-size: 1.6em;
+}
+#privacy-content ol {
+  margin-left: -10px;
 }
