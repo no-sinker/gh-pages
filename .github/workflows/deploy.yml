@@ -27,7 +27,7 @@ jobs:
 
     - name: install hugo
       run: |
-        go get -u github.com/gohugoio/hugo@0.45.1
+        go get -u github.com/gohugoio/hugo
 
     - name: setup public repo
       run: |
