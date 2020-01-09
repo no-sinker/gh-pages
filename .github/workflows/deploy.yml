@@ -1,6 +1,6 @@
 name: Deploy
 
-on: [push]
+on: push
   branches:
   - master
 
@@ -9,6 +9,10 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+
+    env:
+      USERNAME: ponkore
+
     steps:
 
     - name: Set up Go 1.12
@@ -26,7 +30,7 @@ jobs:
 
     - name: setup public repo
       run: |
-          git clone --depth 1 https://USERNAME:${{ secrets.MY_GITHUB_ACCESS_TOKEN }}@github.com/USERNAME/USERNAME.github.io.git public
+          git clone --depth 1 https://ponkore:${{ secrets.MY_GITHUB_ACCESS_TOKEN }}@github.com/no-sinker/no-sinker.github.io.git public
 
     - name: Build
       run: |
@@ -39,8 +43,8 @@ jobs:
       run: |
         export MSG=`git log --format=%B -n 1 HEAD`
         cd public
-        git config --local user.name "NAME"
-        git config --local user.email "EMAIL@gmail.com"
+        git config --local user.name "Masao KATO"
+        git config --local user.email "ponkore@gmail.com"
         git add .
         git commit -m "${MSG}"
         git push origin master
