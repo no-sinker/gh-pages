@@ -29,7 +29,7 @@ jobs:
               cp -rp public/* no-sinker.github.io/
               cd no-sinker.github.io
               ls
-              git remote set-url origin git@github.com:ponkore/no-sinker.github.io.git
+              git remote set-url origin git@github.com:no-sinker/no-sinker.github.io.git
               git add .
               git commit -m "[ci skip] publish"
               git push origin master
