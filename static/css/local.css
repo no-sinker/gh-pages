@@ -1,10 +1,59 @@
+body {
+  background-color: #f8f8f8;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+}
+
+section h2 {
+  padding: 12px;
+  background: green;
+  color: white;
+}
+section h3 {
+  padding: 4px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid green;
+  border-left: 8px solid green;
+}
+section h4 {
+  padding: 4px;
+  margin-bottom: 20px;
+  margin-left: 2rem;
+  border-bottom: 1px dashed green;
+  border-left: 4px solid green;
+}
+section p {
+  margin-left: 2rem;
+  font-size: large;
+}
+section ul {
+  line-height: 2.0em;
+  font-size: large;
+}
+section pre {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: 2.5rem;
+}
+.intro-message > h3 {
+  border-left: none;
+  border-bottom: none;
+}
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
-    background-size: cover;
+  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+  background: url(../img/intro-bg.jpg) no-repeat center center;
+  background-size: cover;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -16,6 +65,9 @@
 #about-content table {
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  font-size: 1.2em;
 }
 #about-content td {
   padding: 8px 10px;
@@ -25,19 +77,33 @@
 #about-content tr:nth-child(2n+1) {
   background-color: #eee;
 }
-.privacy-header {
-    padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    color: #f8f8f8;
+#contact pre {
+  margin-top: 2em;
+  margin-left: 10em;
+  padding: 30px;
+  margin-right: 10em;
+  font-size: large;
+  line-height: 2.0em;
 }
-#privacy-content {
-  // padding-left: 5em;
-  // padding-right: 5em;
+.privacy-header {
+  padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
 }
 #privacy-container {
-  margin-left: -5px;
-  margin-right: -5px;
+  // margin-left: -5px;
+  // margin-right: -5px;
+}
+#privacy-content {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  font-family: serif;
+  font-size: large;
+  line-height: 2.0em;
+}
+#privacy-content h2 {
+  font-family: serif;
 }
 #privacy-content .privacy-policy-head {
   line-height: 1.5em;
@@ -60,7 +126,8 @@
   font-size: 1.6em;
 }
 #privacy-content ol {
-  margin-left: -10px;
+  margin-left: 1.5em;
+  margin-right: 1em;
 }
 .footer-center {
   display: flex;
