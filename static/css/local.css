@@ -85,6 +85,12 @@ section pre {
   font-size: large;
   line-height: 2.0em;
 }
+#business img {
+  border: 1px solid #aaa;
+  margin-top: 1em;
+  margin-bottom: 4em;
+  margin-left: 4em;
+}
 .privacy-header {
   padding-top: 10px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
   padding-bottom: 50px;
