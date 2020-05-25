@@ -6,20 +6,17 @@
 <body>
   {{ partial "header.html" . }}
 
-  <section id="home">
-    <div class="content-section-b">
+  <!-- About Section -->
+  <section id="about" class="container content-section">
+    <div class="content-section-a">
       <div class="container">
 	<div class="row">
-          <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-            <!-- <hr class="section-heading-spacer"> -->
-            <!-- <div class="clearfix"></div> -->
+          <div class="col-lg-10">
+            <h2 class="section-heading">{{ .Title }}</h2>
             <div id="about-content">
               {{ .Content }}
             </div>
 	  </div>
-          <div class="col-lg-5 col-sm-pull-6  col-sm-6 overflow-hidden">
-            <div id="mirrorball"></div>
-          </div>
 	</div>
       </div>
     </div>

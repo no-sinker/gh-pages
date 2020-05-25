@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+
+  <!-- Privacy Policy Section -->
+  <section id="privacy" class="container content-section">
+    <div class="privacy-header">
+    </div>
+    <div id="privacy-container" class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <div id="privacy-content">
+            <h2 class="section-heading">{{ .Title }}</h2>
+	    <div class="privacy-policy-head">
+	    </div>
+            <div id="privacy-policy-body">
+              {{ .Content }}
+            </div>
+	  </div>
+	</div>
+      </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+  {{ partial "js.html" . }}
+</body>
+</html>

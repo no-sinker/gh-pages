@@ -1,8 +1,6 @@
-# baseURL = "https://no-sinker.github.io/"
 baseURL = "https://www.no-sinker.co.jp/"
 languageCode = "ja-jp"
 title = "no-sinker"
-# theme = "landing-page-hugo"
 
 canonifyUrls = "true"
 
