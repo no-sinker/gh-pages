@@ -62,3 +62,7 @@
 #privacy-content ol {
   margin-left: -10px;
 }
+.footer-center {
+  display: flex;
+  justify-content: center;
+}
