@@ -10,17 +10,97 @@
   <section id="contact" class="container content-section">
     <div class="content-section-b">
       <div class="container">
-	<div class="row">
+        <div class="row">
           <div class="col-lg-10">
             <h2 class="section-heading">{{ .Title }}</h2>
             <div id="section-content">
               {{ .Content }}
             </div>
-	  </div>
-	</div>
+          </div>
+        </div>
+        <div class="row">
+          <form id="contact-form" class="needs-validation" novalidate>
+            <div class="form-group contact-form-row">
+              <label id="contact-label-name" class="contact-form-label" for="contact-input-name">
+                氏名
+              </label>
+	      <div class="input-wrapper">
+		<input type="text" id="contact-input-name" class="form-control" required/>
+		<div class="invalid-feedback">氏名を入力して下さい</div>
+	      </div>
+            </div>
+            <div class="form-group contact-form-row">
+              <label id="contact-label-org" class="contact-form-label" for="contact-input-org">
+                会社名 / 所属組織名
+              </label>
+	      <div class="input-wrapper">
+		<input type="text" id="contact-input-org" class="form-control" required/>
+		<div class="invalid-feedback">会社名または所属組織名を入力して下さい</div>
+	      </div>
+            </div>
+            <div class="form-group contact-form-row">
+              <label id="contact-label-mail-addr" class="contact-form-label" for="contact-input-mail-addr">
+                メールアドレス
+              </label>
+	      <div class="input-wrapper">
+		<input type="email" id="contact-input-mail-addr" class="form-control" placeholder="name@example.com"
+		       pattern="[\w\d_\-%#$.,]+@[\w\d_\-]+\.[\w\d._\-]+" required/>
+		<div class="invalid-feedback">正しいメールアドレスの形式で入力して下さい</div>
+	      </div>
+            </div>
+            <div class="form-group contact-form-row">
+              <label id="contact-label-content-main" class="contact-form-label" for="contact-input-content-main">
+                お問い合わせ内容
+              </label>
+	      <div class="input-wrapper">
+		<textarea id="contact-input-content-main" class="form-control" rows="5" required></textarea>
+		<div class="invalid-feedback">お問い合わせ内容を入力して下さい</div>
+	      </div>
+            </div>
+            <div id="contact-send-button-wrapper" class="form-group">
+              <button type="submit" id="contact-send" class="btn btn-primary">送信</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // 無効なフィールドがある場合にフォーム送信を無効にするスターターJavaScriptの実例
+    (function() {
+      'use strict';
+
+      window.addEventListener('load', function() {
+        // カスタムブートストラップ検証スタイルを適用するすべてのフォームを取得
+        var forms = document.getElementsByClassName('needs-validation');
+        // ループして帰順を防ぐ
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (form.checkValidity() === false) {
+              form.classList.add('was-validated');
+	      // validation 失敗
+	      alert('入力内容を確認してください。');
+            } else {
+              form.classList.add('was-validated');
+	      // validation 成功したので、confirm
+	      if (!window.confirm('この内容で送信しますか？')) {
+		return;
+	      }
+	      // send data
+	      var name = document.getElementById('contact-input-name').value;
+	      var org = document.getElementById('contact-input-org').value;
+	      var mailaddr = document.getElementById('contact-input-mail-addr').value;
+	      var contentmain = document.getElementById('contact-input-content-main').value;
+	      console.log(name + '/' + org + '/' + mailaddr + '/' + contentmain);
+	    }
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 
   {{ partial "footer.html" . }}
   {{ partial "js.html" . }}
