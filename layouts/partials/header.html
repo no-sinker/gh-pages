@@ -1,28 +1,14 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="page-scroll navbar-brand" href="/">{{ .Site.Title }}</a>
+<nav class="nav navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container" id="nav-container">
+    <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+    <div class="collapse navbar-collapse justify-content-end">
+      <a class="nav-link" href="/about">会社概要</a>
+      <a class="nav-link" href="/business">事業内容</a>
+      <a class="nav-link" href="/contact">お問い合わせ</a>
+      <a class="nav-link" href="/privacy-policy">Privacy Policy</a>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/about">会社概要</a></li>
-        <li><a href="/business">事業内容</a></li>
-        <li><a href="/contact">お問い合わせ</a></li>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container -->
 </nav>
 
 <section id="intro">

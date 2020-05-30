@@ -12,6 +12,14 @@ h6 {
     font-weight: 500;
 }
 
+#nav-container {
+  display: flex;
+}
+
+.nav-link {
+  color: #5e5e5e;
+}
+
 section h2 {
   padding: 12px;
   background: green;
@@ -19,12 +27,14 @@ section h2 {
 }
 section h3 {
   padding: 4px;
+  margin-top: 1em;
   margin-bottom: 20px;
   border-bottom: 2px solid green;
   border-left: 8px solid green;
 }
 section h4 {
   padding: 4px;
+  margin-top: 1em;
   margin-bottom: 20px;
   margin-left: 2rem;
   border-bottom: 1px dashed green;
@@ -138,4 +148,56 @@ section pre {
 .footer-center {
   display: flex;
   justify-content: center;
+}
+
+.contact-form-row {
+  display: flex;
+  align-items: center;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.contact-input {
+  flex-grow: 1;
+  margin-right: 1em;
+}
+.contact-textarea {
+  flex-grow: 1;
+  margin-right: 1em;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-left: 8rem;
+  width: 70%;
+  margin-top: 2rem;
+  font-size: large;
+  border: 1px solid black;
+}
+#contact-form label {
+  margin-left: 1em;
+  flex-basis: 14em;
+}
+
+#contact-form input[type="text"] {
+  margin-left: 1em;
+  margin-right: 1em;
+  flex-grow: 1;
+}
+#contact-input-content-main {
+  margin-left: 1em;
+  margin-right: 1em;
+  flex-grow: 1;
+}
+
+#contact-send-button-wrapper {
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+}
+#contact-send {
+  width: 10rem;
 }
