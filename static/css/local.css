@@ -174,55 +174,44 @@ section pre {
   display: flex;
   justify-content: center;
 }
-
-.contact-form-row {
-  display: flex;
-  align-items: start;
-  line-height: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.contact-input {
-  flex-grow: 1;
-  margin-right: 1em;
-}
-.contact-textarea {
-  flex-grow: 1;
-  margin-right: 1em;
-}
-
 #contact-form {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-left: 8rem;
-  width: 70%;
-  margin-top: 2rem;
+  padding: 1rem;
+  margin-left: 1.5em;
+  margin-right: auto;
+  width: 80%;
+  margin-top: 1rem;
   font-size: large;
   border: 1px solid black;
 }
 
+.contact-form-row {
+  display: flex;
+  flex-direction: column;
+}
+.contact-input {
+  margin-right: 1em;
+}
+.contact-textarea {
+  margin-right: 1em;
+}
 .contact-form-label {
-  margin-left: 1em;
-  flex-basis: 10em;
+  margin-left: 0.5em;
 }
 .input-wrapper {
-  flex-grow: 1;
   padding-right: 1em;
+  width: 100%;
 }
 .invalid-feedback {
   padding-left: 1em;
 }
 
 #contact-form input[type="text"],input[type="email"] {
-  margin-left: 1em;
-  margin-right: 1em;
-  flex-grow: 1;
+  margin-left: 0.5em;
 }
 #contact-input-content-main {
-  margin-left: 1em;
-  margin-right: 1em;
-  flex-grow: 1;
+  margin-left: 0.5em;
 }
 
 #contact-send-button-wrapper {
