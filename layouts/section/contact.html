@@ -89,12 +89,44 @@
 	      if (!window.confirm('この内容で送信しますか？')) {
 		return;
 	      }
+	      // disable submit button
+	      var btn = document.getElementById('contact-send');
+	      btn.disabled = true;
+	      // loading element
+	      var loading = document.getElementById('loading');
+	      loading.classList.remove('loading-hide');
 	      // send data
 	      var name = document.getElementById('contact-input-name').value;
 	      var org = document.getElementById('contact-input-org').value;
 	      var mailaddr = document.getElementById('contact-input-mail-addr').value;
 	      var contentmain = document.getElementById('contact-input-content-main').value;
-	      console.log(name + '/' + org + '/' + mailaddr + '/' + contentmain);
+	      var apikey = 'HCqkaQ8rvLrKTfDhhCZ6ioGuRutiKS0WXvT6gId3FMOINPaUJfadPw==';
+	      var url = 'https://no-sinker-001-sample.azurewebsites.net/api/sendmail?code=' + apikey;
+	      fetch(url, {
+		method: 'POST',
+		headers: {
+		  'Accept': 'application/json',
+		  'Content-Type': 'application/json'
+		},
+		mode: 'cors',
+		cache: 'no-cache',
+		body: JSON.stringify({
+		  to: mailaddr,
+		  subject: 'from ' + org + ' ' + name,
+		  body: 'org: ' + org + ', name: ' + name + '\n' + contentmain
+		})
+	      }).then(function(data) {
+		console.log('response=' + JSON.stringify(data));
+		btn.disabled = false;
+		loading.classList.add('loading-hide');
+		alert('送信完了');
+	      }).catch(function(err) {
+		console.log('error=');
+		console.log(err);
+		btn.disabled = false;
+		loading.classList.add('loading-hide');
+		alert('送信エラー');
+	      });
 	    }
           }, false);
         });
