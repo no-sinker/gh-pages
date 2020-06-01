@@ -32,7 +32,7 @@ jobs:
 
     - name: Build
       run: |
-        hugo --minify
+        hugo
 
     - name: Deploy
       run: |
