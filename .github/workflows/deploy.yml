@@ -1,4 +1,4 @@
-name: Deploy
+name: github pages
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 jobs:
 
   build:
-    name: Build
     runs-on: ubuntu-latest
 
     env:
@@ -16,31 +15,26 @@ jobs:
 
     steps:
 
-    - name: Set up Go 1.14
-      uses: actions/setup-go@v1
+    - name: Check out site source
+      uses: actions/checkout@v2
       with:
-        go-version: 1.14
-      id: go
-
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v1
-
-    - name: install hugo
-      run: |
-        go get -u github.com/gohugoio/hugo
+        fetch-depth: 0
 
     - name: setup public repo
       run: |
-          git clone --depth 1 https://ponkore:${{ secrets.MY_GITHUB_ACCESS_TOKEN }}@github.com/no-sinker/no-sinker.github.io.git public
+          git clone --depth 1 https://${USERNAME}:${{ secrets.MY_GITHUB_ACCESS_TOKEN }}@github.com/no-sinker/no-sinker.github.io.git public
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.71.1'
+          extended: true
 
     - name: Build
       run: |
-        export PATH=$PATH:`go env GOPATH`/bin
-        git submodule init
-        git submodule update
-        hugo
+        hugo --minify
 
-    - name: Push
+    - name: Deploy
       run: |
         export MSG=`git log --format=%B -n 1 HEAD`
         cd public
