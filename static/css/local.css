@@ -137,9 +137,11 @@ section pre {
   // margin-left: -5px;
   // margin-right: -5px;
 }
+#privacy-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
 #privacy-content {
-  padding-left: 2.5em;
-  padding-right: 2.5em;
   font-family: serif;
   font-size: large;
   line-height: 2.0em;
