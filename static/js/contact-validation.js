@@ -31,15 +31,15 @@
           var org = document.getElementById('contact-input-org').value;
           var mailaddr = document.getElementById('contact-input-mail-addr').value;
           var contentmain = document.getElementById('contact-input-content-main').value;
-          var apikey = 'HCqkaQ8rvLrKTfDhhCZ6ioGuRutiKS0WXvT6gId3FMOINPaUJfadPw==';
-          var url = 'https://no-sinker-001-sample.azurewebsites.net/api/notify?code=' + apikey;
+          // 同一オリジンの notifier（nginx 経由で ns-notifier コンテナへ）
+          var url = '/api/notify';
           fetch(url, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
-            mode: 'cors',
+            mode: 'same-origin',
             cache: 'no-cache',
             body: JSON.stringify({
               name,
